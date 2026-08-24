@@ -8,6 +8,8 @@ a partir de una tabla de verdad — podemos armar los **multiplexores**.
 
 ## Multiplexor de dos entradas de un bit
 
+![Multiplexor 2:1 de un bit](img/mux-2to1.svg)
+
 Se arma con dos compuertas AND y una OR: un inversor en la línea de
 control alimenta a una de las AND (invertida) y a la otra (directa); por
 un lado entra el dato A, por el otro el dato B, y ambas AND se conectan a

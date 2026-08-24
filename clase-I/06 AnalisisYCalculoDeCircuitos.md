@@ -10,6 +10,8 @@ completos.
 
 ## De circuito a tabla de verdad
 
+![Circuito de ejemplo: OR, XOR y AND en etapas](img/circuit-staged.svg)
+
 Dado un circuito, se puede calcular su tabla de verdad analizándolo **por
 etapas**: se listan todas las combinaciones de entrada (en orden creciente,
 para no repetir ninguna) y se calculan los valores intermedios hasta
@@ -50,6 +52,8 @@ las entradas que deben valer 0, conexión directa en las que deben valer
 - Para **010**: AND con inversores en A y C, directa en B.
 - Para **101**: AND con inversor en B, directas en A y C.
 - Para **111**: AND con las tres entradas directas.
+
+![Circuito detector de 010, 101 y 111](img/decoder-detect.svg)
 
 Cada una de estas tres AND se pone en uno solo cuando ocurre su
 combinación. Como Z debe valer 1 si ocurre 010 **o** 101 **o** 111, las

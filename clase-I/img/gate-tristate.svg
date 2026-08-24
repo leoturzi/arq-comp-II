@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 140" width="220" height="192">
+  <rect x="0" y="0" width="160" height="140" fill="white"/>
+  <g font-family="sans-serif" font-size="10" fill="black" text-anchor="middle">
+    <text x="80" y="14">tri-state — LC=1: Z=A</text>
+    <text x="80" y="26">LC=0: Z=alta impedancia</text>
+  </g>
+  <g fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round">
+    <path d="M30,40 L30,100 L90,70 Z" fill="white"/>
+    <line x1="8" y1="70" x2="30" y2="70"/>
+    <line x1="90" y1="70" x2="140" y2="70"/>
+    <line x1="60" y1="125" x2="60" y2="85"/>
+  </g>
+  <g font-family="sans-serif" font-size="14" fill="black">
+    <text x="10" y="65">A</text>
+    <text x="122" y="65">Z</text>
+    <text x="66" y="123">LC</text>
+  </g>
+</svg>

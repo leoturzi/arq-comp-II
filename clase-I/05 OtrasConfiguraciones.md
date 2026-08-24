@@ -7,6 +7,8 @@ complejas, siempre a partir de las mismas [compuertas base](02%20Compuertas.md).
 
 ## Armar una AND de cuatro entradas con AND de dos entradas
 
+![AND de 4 entradas armada con AND de 2 entradas](img/and4-from-and2.svg)
+
 Si solo se consiguen AND de dos entradas, se puede armar una de cuatro:
 dos AND de dos entradas (A·B y C·D) alimentando una tercera AND.
 
@@ -17,6 +19,8 @@ Z = X · Y  →  Z = A · B · C · D
 ```
 
 ## Armar una OR de cuatro entradas con OR de dos entradas
+
+![OR de 4 entradas armada con OR de 2 entradas](img/or4-from-or2.svg)
 
 Mismo esquema con OR:
 

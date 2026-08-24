@@ -8,6 +8,8 @@ XOR y tri-state. Ahora vamos a mirar esas mismas compuertas desde otro
 
 ## Compuerta AND como línea de control
 
+![AND usada como línea de control](img/gate-and-lc.svg)
+
 Tomamos una AND de dos entradas y renombramos una de ellas como línea de
 control, sin cambiar el circuito.
 
@@ -24,6 +26,8 @@ control decide en qué momento "miramos" ese valor a la salida.
 
 ## Compuerta OR como línea de control
 
+![OR usada como línea de control](img/gate-or-lc.svg)
+
 Mismo ejercicio con una OR:
 
 **LC = 0:** Z = A.
@@ -33,6 +37,8 @@ Comportamiento inverso al de la AND: acá Z copia a A cuando LC es cero, y
 queda fija en uno cuando LC es uno.
 
 ## Compuerta EXOR como línea de control
+
+![XOR usada como línea de control](img/gate-xor-lc.svg)
 
 **LC = 0:** Z = A (se comporta como un cable).
 **LC = 1:** Z = Ā (se comporta como una NOT).

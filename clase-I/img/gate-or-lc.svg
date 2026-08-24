@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 100" width="240" height="150">
+  <rect x="0" y="0" width="160" height="100" fill="white"/>
+  <g fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round">
+    <path d="M30,20 Q52,50 30,80 Q72,80 92,50 Q72,20 30,20 Z" fill="white"/>
+    <line x1="8" y1="35" x2="34" y2="35"/>
+    <line x1="8" y1="65" x2="34" y2="65"/>
+    <line x1="92" y1="50" x2="140" y2="50"/>
+  </g>
+  <g font-family="sans-serif" font-size="14" fill="black">
+    <text x="10" y="30">A</text>
+    <text x="10" y="78">LC</text>
+    <text x="122" y="45">Z</text>
+    <text x="48" y="97" font-size="12" text-anchor="middle">OR como línea de control</text>
+  </g>
+</svg>

@@ -11,6 +11,8 @@ computador completo, simplemente relacionándolas de distinta forma.
 
 ## Compuerta OR
 
+![Símbolo de la compuerta OR](img/gate-or.svg)
+
 Representa el conector "o" del lenguaje. En el álgebra de Boole es la
 **suma lógica**:
 
@@ -40,6 +42,8 @@ activos.
   cantidad.
 
 ## Compuerta AND
+
+![Símbolo de la compuerta AND](img/gate-and.svg)
 
 El conector "y" del lenguaje. Es el **producto lógico**:
 
@@ -74,6 +78,8 @@ coincidencia.)
 
 ## Compuerta NOT
 
+![Símbolo de la compuerta NOT](img/gate-not.svg)
+
 También llamada **inversora** o **complemento**. Se escribe con una
 rayita arriba de la variable:
 
@@ -97,6 +103,8 @@ indica la inversión.
   esa señal con una NOT — el cero se convierte en uno y enciende la luz.
 
 ## Compuerta XOR (o excluyente)
+
+![Símbolo de la compuerta XOR](img/gate-xor.svg)
 
 El "o" que usamos al decir "en las vacaciones voy a la playa o a la
 montaña": las dos opciones se excluyen entre sí. Se representa así:
@@ -124,6 +132,8 @@ una central eléctrica o las centrales telefónicas hasta los años 70,
 implementadas con relés electromagnéticos en vez de semiconductores).
 
 ## Compuerta tri-state
+
+![Símbolo de la compuerta tri-state](img/gate-tristate.svg)
 
 No implementa ninguna operación del álgebra de Boole, pero se usa mucho
 en electrónica. Tiene una entrada (A), una salida (Z) y una línea de
