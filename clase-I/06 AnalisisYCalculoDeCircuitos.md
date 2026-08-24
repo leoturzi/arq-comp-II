@@ -21,8 +21,21 @@ Ejemplo con un circuito de tres entradas A, B, C: una OR entre A y B da un
 valor intermedio **X**, una EXOR entre B y C da **Y**, y una AND entre X e
 Y da la salida **Z**. Calculando X e Y para las ocho combinaciones y
 después la AND entre ambas, se llega a la tabla de verdad completa del
-circuito. Con un circuito más grande (30 compuertas, cinco etapas) el
-procedimiento es el mismo, solo que toma más tiempo.
+circuito:
+
+| A | B | C | X = A+B | Y = B⊕C | Z = X·Y |
+|---|---|---|---------|---------|---------|
+| 0 | 0 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 1 | 0 | 1 | 0 |
+| 0 | 1 | 0 | 1 | 1 | 1 |
+| 0 | 1 | 1 | 1 | 0 | 0 |
+| 1 | 0 | 0 | 1 | 0 | 0 |
+| 1 | 0 | 1 | 1 | 1 | 1 |
+| 1 | 1 | 0 | 1 | 1 | 1 |
+| 1 | 1 | 1 | 1 | 0 | 0 |
+
+Con un circuito más grande (30 compuertas, cinco etapas) el procedimiento
+es el mismo, solo que toma más tiempo.
 
 ## Expresión algebraica del circuito
 
@@ -44,10 +57,23 @@ resolver esto de forma óptima; acá no los vamos a ver, porque no es
 necesario para entender el funcionamiento del computador. Pero sí importa
 saber que siempre se puede construir el circuito.
 
-Supongamos una tabla de A, B, C donde Z = 1 solo para las combinaciones
-010, 101 y 111, y 0 en el resto. Con una AND de tres entradas (con NOT en
-las entradas que deben valer 0, conexión directa en las que deben valer
-1) se puede detectar cualquier combinación puntual:
+Supongamos la siguiente tabla, donde Z = 1 solo para las combinaciones
+010, 101 y 111, y 0 en el resto:
+
+| A | B | C | Z |
+|---|---|---|---|
+| 0 | 0 | 0 | 0 |
+| 0 | 0 | 1 | 0 |
+| 0 | 1 | 0 | 1 |
+| 0 | 1 | 1 | 0 |
+| 1 | 0 | 0 | 0 |
+| 1 | 0 | 1 | 1 |
+| 1 | 1 | 0 | 0 |
+| 1 | 1 | 1 | 1 |
+
+Con una AND de tres entradas (con NOT en las entradas que deben valer 0,
+conexión directa en las que deben valer 1) se puede detectar cualquier
+combinación puntual:
 
 - Para **010**: AND con inversores en A y C, directa en B.
 - Para **101**: AND con inversor en B, directas en A y C.
