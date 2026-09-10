@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 360" width="400" height="360">
+  <rect x="0" y="0" width="400" height="360" fill="white"/>
+
+  <g fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- trunks A, B, C -->
+    <line x1="20" y1="22" x2="20" y2="292"/>
+    <line x1="45" y1="40" x2="45" y2="310"/>
+    <line x1="70" y1="58" x2="70" y2="328"/>
+
+    <!-- Gate 1: 0,1,1 -> A inv, B direct, C direct -->
+    <line x1="20" y1="22" x2="120" y2="22"/>
+    <line x1="134" y1="22" x2="140" y2="22"/>
+    <line x1="45" y1="40" x2="140" y2="40"/>
+    <line x1="70" y1="58" x2="140" y2="58"/>
+    <path d="M140,10 L170,10 A25,30 0 0 1 170,70 L140,70 Z" fill="white" stroke-width="2.5"/>
+    <line x1="195" y1="40" x2="230" y2="40"/>
+
+    <!-- Gate 2: 1,0,1 -> A direct, B inv, C direct -->
+    <line x1="20" y1="112" x2="140" y2="112"/>
+    <line x1="45" y1="130" x2="120" y2="130"/>
+    <line x1="134" y1="130" x2="140" y2="130"/>
+    <line x1="70" y1="148" x2="140" y2="148"/>
+    <path d="M140,100 L170,100 A25,30 0 0 1 170,160 L140,160 Z" fill="white" stroke-width="2.5"/>
+    <line x1="195" y1="130" x2="230" y2="130"/>
+
+    <!-- Gate 3: 1,1,0 -> A direct, B direct, C inv -->
+    <line x1="20" y1="202" x2="140" y2="202"/>
+    <line x1="45" y1="220" x2="140" y2="220"/>
+    <line x1="70" y1="238" x2="120" y2="238"/>
+    <line x1="134" y1="238" x2="140" y2="238"/>
+    <path d="M140,190 L170,190 A25,30 0 0 1 170,250 L140,250 Z" fill="white" stroke-width="2.5"/>
+    <line x1="195" y1="220" x2="230" y2="220"/>
+
+    <!-- Gate 4: 1,1,1 -> all direct -->
+    <line x1="20" y1="292" x2="140" y2="292"/>
+    <line x1="45" y1="310" x2="140" y2="310"/>
+    <line x1="70" y1="328" x2="140" y2="328"/>
+    <path d="M140,280 L170,280 A25,30 0 0 1 170,340 L140,340 Z" fill="white" stroke-width="2.5"/>
+    <line x1="195" y1="310" x2="230" y2="310"/>
+
+    <!-- inversion bubbles -->
+    <circle cx="127" cy="22" r="7" fill="white" stroke-width="2.5"/>
+    <circle cx="127" cy="130" r="7" fill="white" stroke-width="2.5"/>
+    <circle cx="127" cy="238" r="7" fill="white" stroke-width="2.5"/>
+
+    <!-- OR gate (4 inputs) -->
+    <path d="M230,10 Q252,175 230,340 Q292,340 352,175 Q292,10 230,10 Z" fill="white" stroke-width="2.5"/>
+    <line x1="230" y1="130" x2="245" y2="130"/>
+    <line x1="230" y1="220" x2="245" y2="220"/>
+    <line x1="352" y1="175" x2="390" y2="175"/>
+  </g>
+
+  <g fill="black" stroke="none">
+    <circle cx="20" cy="22" r="3"/>
+    <circle cx="45" cy="40" r="3"/>
+    <circle cx="20" cy="112" r="3"/>
+    <circle cx="70" cy="148" r="3"/>
+    <circle cx="45" cy="220" r="3"/>
+    <circle cx="70" cy="238" r="3"/>
+  </g>
+
+  <g font-family="sans-serif" font-size="15" fill="black">
+    <text x="4" y="18">A</text>
+    <text x="4" y="106">A</text>
+    <text x="4" y="198">A</text>
+    <text x="4" y="288">A</text>
+    <text x="29" y="36">B</text>
+    <text x="29" y="126">B</text>
+    <text x="29" y="216">B</text>
+    <text x="29" y="306">B</text>
+    <text x="54" y="54">C</text>
+    <text x="54" y="144">C</text>
+    <text x="54" y="234">C</text>
+    <text x="54" y="324">C</text>
+    <text x="378" y="180">Cs</text>
+  </g>
+  <g font-family="sans-serif" font-size="11" fill="black">
+    <text x="196" y="14">011</text>
+    <text x="196" y="104">101</text>
+    <text x="196" y="194">110</text>
+    <text x="196" y="284">111</text>
+  </g>
+</svg>

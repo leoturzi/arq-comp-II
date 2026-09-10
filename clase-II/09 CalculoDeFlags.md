@@ -1,8 +1,91 @@
-Estamos en condiciones de armar una WAL, es decir, con lo que hemos aprendido hasta acá, se van a una casa de electrónica y piden, denme chiquicientas con puertas and chiquicientas con puertas negadoras menos por suerte con puertas OR. Se arman 1 2 3 4 5 64 sumadores de un dígito. Los interconectan entre sí y ya están armando la misma Wal h que tienen adentro en eh su eh procesador al cual están usando en este momento. Bueno, ven, tenemos los sumadores interconectados carry con carry. Acá me va a quedar un carry disponible para calcular los flaxs. Después vamos a ver las entradas eh B, que son las más complejas. Acá va el la 3, la B2, la B1 y el dígito B0. Y aquí vamos a tener no sí vamos a tener ¿Dónde pongo acá mejor? No. A3, A2, A1 y A0. No, vamos a poner puntitos para que quede clara dónde están cada una de las entradas. No, es decir, acá ya estamos hablando de lo que viene desde fuera de la W, A3, B3, todo esto son las conexiones externas de la W. La línea de control es conexión externa de la WAL. Aquí tenemos la entrada para sumar en el caso de la resta. Y ahora tenemos salida de suma va de resultado, suma de resta, ¿no? Suma tres, suma dos, suma uno y suma. Y tenemos todo listo, todo listo para armar los flags. Está bueno, se van imaginando más o menos cómo armar los flags. Tenemos que recordar las condiciones, las condiciones en en bajo bajo cuales se generaban. Ir a buscar los datos dentro de este circuito y ponerle compuertas para llegar al resultado. Está bueno, yo voy a hacer el más difícil y les dejo a ustedes con ejemplo como para calcular los otros que son más sencillos. Está bueno. Bien, acá está el signo. No es el más complejo, este es el más sencillo. Es decir, el flag signo no es otra cosa que la copia del dígito eh de mayor peso del resultado. Ya no no lo voy a dejar en banda. Vamos a calcular el cero. ¿Cuándo da cero? el flag cero, es decir, cuando el flag se pone en uno,
-cuando es todo cero.
-Exactamente. Entonces, ¿qué vamos a hacer? Ya sabemos que podemos usar una compuerta and para detectar una particular condición. Entonces, detectemos cuando aquí, aquí, aquí y acá hay 0 0 con eso entramos a una Y aquí tenemos calculado el cero. Si uno de estos es uno, a la entra un cero y por lo tanto Z se pone en cero. Es decir, basta que uno no sea uno o más de uno para que Z esté en cer. Pero cuando los cuatro están en cer pasa 1 0 pasa 1 0 pasa 1 0 pasa 1. Tengo un uno en el flag Z. ¿Se acuerdan el carry como era? Si era una suma el carga era igual.
-Miras el carry de digamos del último sumador,
-es decir, el del el del dígito mayor. Si es una suma se copiaba este, ¿verdad? Y si es una resta, ¿y qué compuerta tenemos? Eso
-exactamente. Es decir, ponemos acá un exor su salida que va a ser el carry y esto se tiene que cambiar el funcionamiento en base a qué? En base a la línea de control que dice si hay suma o si hay resta. Es decir, que la línea de control no solo alimenta el uno adicional del dígito de las unidades, no solo invierte el sustraendo, sino que al mismo tiempo invierte el carry para que todo funcione como hemos estudado. Cuidado que funciona. Y ahora recordemos el último, el tema del del overflow. Y para recordar el overflow, recordemos que, por ejemplo, si yo tenía 1 y cer en el sumador, esto era condición de overflow 1. Pero si tenía 0 0 y 1 en el sumador, esto era condición de overflow 1. Entonces, ¿dónde tenemos esos signos que entran y que salen del sumador
-eh las entradas de los números, pero debajo de la x por.
-Exactamente. Eso es lo más importante. Es decir, que el sumador el sumador es este. Entonces, cuando estamos dibujando esto, esto en cambio es la entrada a la WAL. Quiere decir que el signo que tenemos que tener en cuenta es este, es este y es este. Lo vamos a poner en vez de poner acá, ya lo pongo acá. Tenerlo más cerca está. Entonces, entre estos tres yo tengo que detectar si este es cero, si este es cero con este uno o si este es uno y este es uno con este cero. Ya. Y esto, ¿cómo lo hago? Bueno, lo hago con dos ans, una y dos. 0 1 Esperen que esteajo lo tengo que llevar Aquí vamos a ponerle una unión acá. Este lo conectamos derecho ahí y también lo vamos a conectar aquí. Y este en cambio lo vamos a llevar hasta acá y vamos a hacerle así y así. Ya. Entonces, fíjense cuando aquí yo tengo cer voy a tener 0 se va a convertir por uno. Acá cuando tengo uno conjuntamente con 00 aquí voy a tener un 1. Y de la otra forma cuando aquí yo tengo 1 voy a tener el 1 acá, que no me sirve para nada, pero voy a tener el 1 y uno acá. Y si este uno y uno se da con este que vale cer, entonces aquí voy a tener un uno. Integro estos dos en una única salida que se en uno cuando ocurre esto o esto y aquí tengo el flag overflow. Le vamos a poner la flechita como le puse en el otro lado. Fíjense que hemos todavía no hemos terminado la segunda clase y ustedes ya están en condiciones de armar una unidad aritmética lógica, cantidad de bits que quieran, porque si en vez de hacer cuatro ustedes quisieran una de ocho, Acá en el medio ponen cuatro de estos. Es decir, fíjense que los eh sumadores del medio no están ni conectados a la línea de control, ni están conectados a la a los flag. Lo único sí estarían a los flags aumentando las patitas de entrada de esta de esta anda, pero aumentando aquí la cantidad de sumadores, este que es de cuatro lo pueden convertir en 8 o en 16 o en 32 o en 64 o la cantidad que sea. Para comprenderlo alcanza cu, por eso lo hacemos con Este tipo de circuitos se llama lógica combinacional. ¿Por qué? Porque combinacional. ¿Por qué? Porque la salida siempre depende de la combinación de las entradas. Es decir, yo le pongo a las entradas una determinada combinación, tengo siempre la misma salida. Hay circuitos que no se comportan así y son los que les voy a presentar ahora no más. Está Quiere decir que Ustedes aún cuando no están en condiciones de calcular el circuito óptimo, como sería el conocer Carnau, eh o como aún no estando en condiciones de hacer analogías mediante el álgebra de Bull, que es algo que estudian los que tienen que realmente diseñar circuitos de este tipo. Hm. Ustedes ya están en condiciones de entenderlo. Hm. E incluso de armarlo de una forma no es decir, El si lo armaran como lo hemos aprendido, sí gastarían muchas más compuertas, pero funcionaría. Hm. Y están en condiciones de comprender en un circuito hm lo que el sistema de computación uno lo estuvimos viendo eh a nivel lógico. Hablábamos de la WAL, hablábamos del comportamiento de los OFAS, así que comentario al margen, todos los que tienen que dar sistemas uno, no pierdan esta oportunidad para ir a ver el conocimiento de sistemas uno y macharlo, es decir, ah, mirá, tal cosa y tal cosa, porque eso les va a permitir ir aprendiendo sistemas uno de una forma mucho más concisa, porque ahora no solo saben cómo funcionaba lógicamente, sino cómo se lo implementa físicamente.
+# 09 Cálculo de Flags
+
+[⬅ Volver al índice](README.md)
+
+Con la [UAL ya armada](08%20Construyendo%20una%20UAL.md) — sumador de N
+bits, con XOR selectoras en B y la línea de control (LC) alimentando el
+carry inicial — falta calcular los cuatro flags: **signo**, **cero**,
+**carry** y **overflow**. Para cada uno hay que identificar de qué punto
+del circuito sale el dato y qué compuertas hacen falta para llegar al
+resultado.
+
+## Signo (S)
+
+Es el flag más simple: es una copia directa del bit más significativo
+del resultado (S3 en un ejemplo de 4 bits). No hace falta ninguna
+compuerta, es la misma señal cableada hacia afuera.
+
+## Cero (Z)
+
+Se pone en 1 solo cuando **todos** los bits del resultado son 0. Se
+detecta con una AND de todos los bits negados: si S3, S2, S1 y S0
+valen 0, cada NOT entrega 1 y la AND da 1; si cualquiera de ellos vale
+1, esa entrada de la AND llega en 0 y Z se pone en 0.
+
+```
+Z = S3' · S2' · S1' · S0'
+```
+
+![Circuito del flag cero: AND de 4 entradas negadas](img/zero-flag.svg)
+
+## Carry (C)
+
+Sale del carry de salida del **último** sumador de un dígito (el del
+bit más significativo). Si la operación es una suma, el flag copia
+directo ese carry. Si es una resta, hay que invertirlo (por cómo
+funciona el carry en complemento a dos, la lectura de "hubo acarreo" se
+invierte respecto a la suma).
+
+Como la línea de control (LC) ya indica si se está sumando o restando,
+alcanza con una compuerta XOR entre el carry de salida y LC: con LC = 0
+la XOR copia el carry sin cambios, con LC = 1 lo invierte.
+
+```
+C = Cs_final ⊕ LC
+```
+
+## Overflow (V)
+
+Es el más complejo. Ocurre cuando se suman dos números del mismo signo y
+el resultado da signo distinto — por ejemplo, dos positivos sumando dan
+un negativo, o dos negativos dan un positivo. Importante: hay que mirar
+los signos que **entran al sumador interno**, no los que entran a la
+UAL desde afuera — es decir, el bit A3, el bit B3 *ya pasado por la XOR*
+(complementado si es resta), y el bit de signo del resultado S3.
+
+Condición de overflow:
+
+- A3 = 0, B'3 = 0 y S3 = 1 (dos positivos dan un resultado negativo), o
+- A3 = 1, B'3 = 1 y S3 = 0 (dos negativos dan un resultado positivo).
+
+```
+V = (A3' · B'3' · S3) + (A3 · B'3 · S3')
+```
+
+Se arma con dos AND de 3 entradas (cada una con los inversores que le
+correspondan) y una OR final que junta ambas condiciones:
+
+![Circuito de detección de overflow](img/overflow-circuit.svg)
+
+## Cierre
+
+Con esto la UAL queda completa: el sumador interno de un dígito
+replicado N veces, la selección de suma/resta con XOR sobre B y el
+carry inicial, y los cuatro flags calculados a partir de las señales
+internas del circuito (signo copiado, cero por AND de negados, carry
+por XOR con la línea de control, overflow por comparación de signos de
+entrada y salida del sumador).
+
+Es un circuito de **lógica combinacional**: la salida depende
+únicamente de la combinación de entradas en un momento dado, sin memoria
+de estados anteriores. Escalarlo de 4 a 8, 16, 32 o 64 bits es agregar
+más sumadores de un dígito en la cadena — no cambia nada del diseño de
+los flags ni de la selección de suma/resta.
+
+No es el circuito óptimo (para eso están los diagramas de Karnaugh y el
+álgebra de Boole, que no vemos en esta materia), pero es exactamente el
+mismo comportamiento lógico que se estudiaba como caja negra en Sistemas
+de Computación I — ahora resuelto con compuertas reales.
+
+---
+[⬅ Volver al índice](README.md)

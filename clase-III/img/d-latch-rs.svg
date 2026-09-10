@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 260" width="480" height="260">
+  <rect x="0" y="0" width="480" height="260" fill="white"/>
+  <g fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- D trunk (vertical, izquierda) -->
+    <line x1="20" y1="20" x2="20" y2="230"/>
+    <!-- Clock trunk (vertical) -->
+    <line x1="50" y1="40" x2="50" y2="250"/>
+
+    <!-- D -> entrada superior de AND_S -->
+    <line x1="20" y1="45" x2="150" y2="45"/>
+    <!-- Clock -> entrada inferior de AND_S -->
+    <line x1="50" y1="75" x2="150" y2="75"/>
+
+    <!-- AND_S: S = D · Clock -->
+    <path d="M150,30 L180,30 A25,30 0 0 1 180,90 L150,90 Z" fill="white"/>
+    <line x1="210" y1="60" x2="260" y2="60"/>
+
+    <!-- D -> NOT -->
+    <line x1="20" y1="140" x2="70" y2="140"/>
+    <path d="M70,125 L70,155 L110,140 Z" fill="white"/>
+    <circle cx="118" cy="140" r="7" fill="white"/>
+    <line x1="125" y1="140" x2="125" y2="185"/>
+    <line x1="125" y1="185" x2="150" y2="185"/>
+
+    <!-- Clock -> entrada inferior de AND_R -->
+    <line x1="50" y1="215" x2="150" y2="215"/>
+
+    <!-- AND_R: R = D̄ · Clock -->
+    <path d="M150,170 L180,170 A25,30 0 0 1 180,230 L150,230 Z" fill="white"/>
+    <line x1="210" y1="200" x2="260" y2="200"/>
+
+    <!-- caja RS (biestable de la figura anterior) -->
+    <rect x="260" y="20" width="110" height="220" fill="white" stroke-width="2.5"/>
+    <line x1="370" y1="80" x2="410" y2="80"/>
+    <line x1="370" y1="180" x2="410" y2="180"/>
+  </g>
+  <g fill="black" stroke="none">
+    <circle cx="20" cy="45" r="3"/>
+    <circle cx="50" cy="75" r="3"/>
+    <circle cx="20" cy="140" r="3"/>
+    <circle cx="50" cy="215" r="3"/>
+  </g>
+  <g font-family="sans-serif" font-size="15" fill="black">
+    <text x="4" y="16">D</text>
+    <text x="34" y="36">Clock</text>
+    <text x="225" y="55">S</text>
+    <text x="225" y="215">R</text>
+    <text x="420" y="85">Q</text>
+    <text x="420" y="185">Q̄</text>
+  </g>
+  <g font-family="sans-serif" font-size="16" fill="black" text-anchor="middle">
+    <text x="315" y="135">RS</text>
+  </g>
+  <g font-family="sans-serif" font-size="12" fill="black" text-anchor="middle">
+    <text x="240" y="253">D-latch real: S = D·Clock, R = D̄·Clock, sobre el flip-flop RS</text>
+  </g>
+</svg>

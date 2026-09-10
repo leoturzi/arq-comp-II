@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 540" width="860" height="540">
+  <rect x="0" y="0" width="860" height="540" fill="white"/>
+  <g fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Decoder A -->
+    <rect x="50" y="100" width="100" height="430" fill="white" stroke-width="2.5"/>
+    <line x1="10" y1="230" x2="50" y2="230"/>
+    <line x1="10" y1="390" x2="50" y2="390"/>
+
+    <!-- Decoder B -->
+    <rect x="300" y="10" width="360" height="60" fill="white" stroke-width="2.5"/>
+    <line x1="260" y1="25" x2="300" y2="25"/>
+    <line x1="260" y1="45" x2="300" y2="45"/>
+
+    <!-- a-trunks (salidas de Decoder A) -->
+    <line x1="150" y1="190" x2="650" y2="190"/>
+    <line x1="150" y1="350" x2="650" y2="350"/>
+    <line x1="150" y1="510" x2="650" y2="510"/>
+
+    <!-- b-trunks (salidas de Decoder B) -->
+    <line x1="340" y1="70" x2="340" y2="445"/>
+    <line x1="480" y1="70" x2="480" y2="445"/>
+    <line x1="620" y1="70" x2="620" y2="445"/>
+
+    <!-- jogs b -> entrada superior de cada AND -->
+    <line x1="340" y1="125" x2="380" y2="125"/>
+    <line x1="340" y1="285" x2="380" y2="285"/>
+    <line x1="340" y1="445" x2="380" y2="445"/>
+    <line x1="480" y1="125" x2="520" y2="125"/>
+    <line x1="480" y1="285" x2="520" y2="285"/>
+    <line x1="480" y1="445" x2="520" y2="445"/>
+    <line x1="620" y1="125" x2="660" y2="125"/>
+    <line x1="620" y1="285" x2="660" y2="285"/>
+    <line x1="620" y1="445" x2="660" y2="445"/>
+
+    <!-- jogs a -> entrada inferior de cada AND -->
+    <line x1="370" y1="190" x2="370" y2="155"/>
+    <line x1="370" y1="155" x2="380" y2="155"/>
+    <line x1="510" y1="190" x2="510" y2="155"/>
+    <line x1="510" y1="155" x2="520" y2="155"/>
+    <line x1="650" y1="190" x2="650" y2="155"/>
+    <line x1="650" y1="155" x2="660" y2="155"/>
+
+    <line x1="370" y1="350" x2="370" y2="315"/>
+    <line x1="370" y1="315" x2="380" y2="315"/>
+    <line x1="510" y1="350" x2="510" y2="315"/>
+    <line x1="510" y1="315" x2="520" y2="315"/>
+    <line x1="650" y1="350" x2="650" y2="315"/>
+    <line x1="650" y1="315" x2="660" y2="315"/>
+
+    <line x1="370" y1="510" x2="370" y2="475"/>
+    <line x1="370" y1="475" x2="380" y2="475"/>
+    <line x1="510" y1="510" x2="510" y2="475"/>
+    <line x1="510" y1="475" x2="520" y2="475"/>
+    <line x1="650" y1="510" x2="650" y2="475"/>
+    <line x1="650" y1="475" x2="660" y2="475"/>
+
+    <!-- 9 AND2: g_ij = a_i . b_j -->
+    <path d="M380,110 L410,110 A25,30 0 0 1 410,170 L380,170 Z" fill="white" stroke-width="2.5"/>
+    <path d="M520,110 L550,110 A25,30 0 0 1 550,170 L520,170 Z" fill="white" stroke-width="2.5"/>
+    <path d="M660,110 L690,110 A25,30 0 0 1 690,170 L660,170 Z" fill="white" stroke-width="2.5"/>
+    <path d="M380,270 L410,270 A25,30 0 0 1 410,330 L380,330 Z" fill="white" stroke-width="2.5"/>
+    <path d="M520,270 L550,270 A25,30 0 0 1 550,330 L520,330 Z" fill="white" stroke-width="2.5"/>
+    <path d="M660,270 L690,270 A25,30 0 0 1 690,330 L660,330 Z" fill="white" stroke-width="2.5"/>
+    <path d="M380,430 L410,430 A25,30 0 0 1 410,490 L380,490 Z" fill="white" stroke-width="2.5"/>
+    <path d="M520,430 L550,430 A25,30 0 0 1 550,490 L520,490 Z" fill="white" stroke-width="2.5"/>
+    <path d="M660,430 L690,430 A25,30 0 0 1 690,490 L660,490 Z" fill="white" stroke-width="2.5"/>
+
+    <!-- salidas -->
+    <line x1="440" y1="140" x2="470" y2="140"/>
+    <line x1="580" y1="140" x2="610" y2="140"/>
+    <line x1="720" y1="140" x2="750" y2="140"/>
+    <line x1="440" y1="300" x2="470" y2="300"/>
+    <line x1="580" y1="300" x2="610" y2="300"/>
+    <line x1="720" y1="300" x2="750" y2="300"/>
+    <line x1="440" y1="460" x2="470" y2="460"/>
+    <line x1="580" y1="460" x2="610" y2="460"/>
+    <line x1="720" y1="460" x2="750" y2="460"/>
+  </g>
+  <g fill="black" stroke="none">
+    <circle cx="340" cy="125" r="3"/>
+    <circle cx="340" cy="285" r="3"/>
+    <circle cx="480" cy="125" r="3"/>
+    <circle cx="480" cy="285" r="3"/>
+    <circle cx="620" cy="125" r="3"/>
+    <circle cx="620" cy="285" r="3"/>
+    <circle cx="370" cy="190" r="3"/>
+    <circle cx="510" cy="190" r="3"/>
+    <circle cx="370" cy="350" r="3"/>
+    <circle cx="510" cy="350" r="3"/>
+    <circle cx="370" cy="510" r="3"/>
+    <circle cx="510" cy="510" r="3"/>
+  </g>
+  <g font-family="sans-serif" font-size="15" fill="black">
+    <text x="0" y="226">A1</text>
+    <text x="0" y="386">A0</text>
+    <text x="232" y="21">B1</text>
+    <text x="232" y="41">B0</text>
+    <text x="155" y="186">a1</text>
+    <text x="155" y="346">a2</text>
+    <text x="155" y="506">a3</text>
+    <text x="345" y="85">b1</text>
+    <text x="485" y="85">b2</text>
+    <text x="625" y="85">b3</text>
+  </g>
+  <g font-family="sans-serif" font-size="16" fill="black" text-anchor="middle">
+    <text x="100" y="308">DEC</text>
+    <text x="100" y="326">2:4 (A)</text>
+    <text x="480" y="45">DEC 2:4 (B)</text>
+  </g>
+  <g font-family="sans-serif" font-size="12" fill="black">
+    <text x="392" y="102">g11</text>
+    <text x="532" y="102">g12</text>
+    <text x="672" y="102">g13</text>
+    <text x="392" y="262">g21</text>
+    <text x="532" y="262">g22</text>
+    <text x="672" y="262">g23</text>
+    <text x="392" y="422">g31</text>
+    <text x="532" y="422">g32</text>
+    <text x="672" y="422">g33</text>
+  </g>
+  <g font-family="sans-serif" font-size="13" fill="black">
+    <text x="475" y="145">&#8594; P0</text>
+    <text x="615" y="145">&#8594; P1</text>
+    <text x="755" y="145">&#8594; P1,P0</text>
+    <text x="475" y="305">&#8594; P1</text>
+    <text x="615" y="305">&#8594; P2</text>
+    <text x="755" y="305">&#8594; P2,P1</text>
+    <text x="475" y="465">&#8594; P1,P0</text>
+    <text x="615" y="465">&#8594; P2,P1</text>
+    <text x="755" y="465">&#8594; P3,P0</text>
+  </g>
+  <g font-family="sans-serif" font-size="12" fill="black" text-anchor="middle">
+    <text x="430" y="525">Decodificación de A y B (dos DEC 2:4, ver clase-I archivo 04) cruzadas con AND2 — g_ij = 1 cuando A=i, B=j</text>
+  </g>
+</svg>

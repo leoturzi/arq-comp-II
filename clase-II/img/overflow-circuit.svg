@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 220" width="380" height="220">
+  <rect x="0" y="0" width="380" height="220" fill="white"/>
+
+  <g fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- trunks: A3, B'3, S3 -->
+    <line x1="20" y1="20" x2="20" y2="150"/>
+    <line x1="45" y1="40" x2="45" y2="170"/>
+    <line x1="70" y1="60" x2="70" y2="190"/>
+
+    <!-- Gate 1: A3 direct, B'3 direct, S3 inv (detects 0,0,1) -->
+    <line x1="20" y1="20" x2="140" y2="20"/>
+    <line x1="45" y1="40" x2="140" y2="40"/>
+    <line x1="70" y1="60" x2="120" y2="60"/>
+    <line x1="134" y1="60" x2="140" y2="60"/>
+    <path d="M140,10 L170,10 A25,30 0 0 1 170,70 L140,70 Z" fill="white" stroke-width="2.5"/>
+    <line x1="195" y1="40" x2="230" y2="40"/>
+    <circle cx="127" cy="60" r="7" fill="white" stroke-width="2.5"/>
+
+    <!-- Gate 2: A3 inv, B'3 inv, S3 direct (detects 1,1,0) -->
+    <line x1="20" y1="150" x2="120" y2="150"/>
+    <line x1="134" y1="150" x2="140" y2="150"/>
+    <line x1="45" y1="170" x2="120" y2="170"/>
+    <line x1="134" y1="170" x2="140" y2="170"/>
+    <line x1="70" y1="190" x2="140" y2="190"/>
+    <path d="M140,140 L170,140 A25,30 0 0 1 170,200 L140,200 Z" fill="white" stroke-width="2.5"/>
+    <line x1="195" y1="170" x2="230" y2="170"/>
+    <circle cx="127" cy="150" r="7" fill="white" stroke-width="2.5"/>
+    <circle cx="127" cy="170" r="7" fill="white" stroke-width="2.5"/>
+
+    <!-- OR gate combining both -->
+    <path d="M230,20 Q245,105 230,190 Q272,190 302,105 Q272,20 230,20 Z" fill="white" stroke-width="2.5"/>
+    <line x1="302" y1="105" x2="345" y2="105"/>
+  </g>
+
+  <g fill="black" stroke="none">
+    <circle cx="20" cy="20" r="3"/>
+    <circle cx="45" cy="40" r="3"/>
+    <circle cx="70" cy="60" r="3"/>
+    <circle cx="20" cy="150" r="3"/>
+    <circle cx="45" cy="170" r="3"/>
+    <circle cx="70" cy="190" r="3"/>
+  </g>
+
+  <g font-family="sans-serif" font-size="14" fill="black">
+    <text x="4" y="16">A3</text>
+    <text x="4" y="146">A3</text>
+    <text x="29" y="36">B'3</text>
+    <text x="29" y="166">B'3</text>
+    <text x="54" y="56">S3</text>
+    <text x="54" y="186">S3</text>
+    <text x="333" y="110">V</text>
+  </g>
+</svg>

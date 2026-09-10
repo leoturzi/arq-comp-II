@@ -1,1 +1,122 @@
-Ahora que ya saben cómo a partir de la tabla de verdad construir un circuito, como somos valientes, vamos a construir el circuito de la WAL. Nosotros recordábamos este símbolo, digamos, de sistema de computación uno, donde llegaba aquí una línea de control que si era cero la sumar. Y si era uno, la cual restaba. A la cual le llegan números de la misma cantidad de bits. Si acá tengo cuatro, aquí tengo cuatro y aquí salen cuatro. Si aquí tengo 8 8 16 16 32 64. Y dijimos que internamente la WAL solo tiene un sumador. H, por lo tanto, debiéramos lograr armar ese sumador porque si armamos este sumador después El ingreso y salida de los datos va a ser más sencillo. ¿Qué hace este sumador? A ver, veamos una opción de 4 bits. Yo tengo 0 1 1 + 0 1 ¿Cómo hacemos nosotros para hacer la suma? Que es lo mismo que hace el sumador, vamos sumando dígito a dígito. Hacemos 1 + 0 es 1. No me llevo nada. En realidad, cuando yo hago la suma tengo en cuenta si me estoy llevando algo o no. Hm. Acá es como que no me llevo nada, por lo tanto no pongo nada aquí arriba. 1 + 1 es 1 0 es 2. Entonces pongo el er y hay un uno que me lo llevo aquí arriba. Este uno es salida de esta operación, pero la uso como entrada en la siguiente. 1 + 1 + 1 es 1 1. Entonces, de nuevo, esta suma me da dos salidas, uno y un 1. acá que lo pongo chiquitito porque en realidad lo meto como entrada en la siguiente y 1 + 0 + 0 es 1. Está y este es el resultado de 4 bits. Vimos dos entradas de 4 bits. Si fueran dos entradas de ocho, tendríamos un resultado de ocho, etcétera, etcétera. Esto también nos permitía de este sumador salían los fluxs, es decir, este uno, este uno me determinaba el signo. Signo igual a 1. Después, este cero que hay acá en una resta implicaba que se complementaba y salía que el carry era uno. Como el resultado no es 00, entonces del resultado completo salía que no era cero el resultado. Está. Y por último, Como yo estoy sumando dos positivos y me da un negativo, la comparación de estos signos me generaba que el overflow era uno. Todo esto sale este sumador interno. Bueno, el objetivo es, ¿podremos hacer esto con circuitos? Yo les digo que sí, pero analicemos un poquito el problema. Si nosotros Nosotros queremos analizar todo, todo. Acá tenemos una, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, como 12 entradas para cuatro salidas. Es un problema enorme. Pero si analizamos un dígito, un dígito solamente, fíjense que acá tenemos tres entradas y dos salidas, podríamos construir la tabla de un circuito de tres entradas. y dos salidas. Y lo más interesante es que este circuito después se reproduciría de nuevo acá y se reproduciría de nuevo acá. Es decir, es el mismo circuito que lo usamos para decir 0 + 1 + 1 o 1 + 1 + 1 o 1 + 0 + 0 que me da y 1 o 1 y 1 o 1 y 0. ¿Está claro lo que estoy haciendo? Es decir, yo al sumador acá al sumador llegan múltiples entre entradas que son binarias, pero si analizo un dígito nada más, a un dígito llegan nada más que tres entradas, es decir, llega el número que viene de A, el número que viene de B y el carry que genera el dígito anterior. Entonces, tengo tres entradas y tengo dos salidas porque esto me va a dar un resultado y un número que va a ir al card siguiente. Quiere decir que Este problema de armar la hemos dividido lo hemos dividido a encontrar este circuito que es el sumador de un dígito binario. Cuando lo armemos, cuando lo armemos, lo vamos a encerrar en un encapsulado al cual le va a llegar un número de A, un número de B y un número del carry anterior. A este le pondremos al lado otro sumador igual. donde el carry que es salida de este pasa a ser entrada de este. Este va a tener un A, va a tener un B, va a tener una suma. Los dos van a tener una suma y van a tener un carry que va al siguiente. Entonces, ponemos aquí el dígito siguiente equipos, digamos, circuitos totalmente iguales unos de los otros. A B suma carry que va al siguiente. Y de nuevo A, e B y A suma y el carry que me servirá para los flaxs. Entonces, si este fuera un número de cuatro dígitos, este sería el A3, el A2, el A1 y el A0. Este va a ser el B3, el B2, el B1 y el B0. Me quedaría acá una patita libre, porque si lo hacemos igual a este, me queda una patita libre. Bueno, pongámosle para que no jorobe. Y acá tendríamos la suma, el dígito tres de la suma, no se ve. El dígito dos de la suma, el dígito uno de la suma y el dígito cero. Todo armando este circuito. Y para armar este circuito vamos a usar cómo debe funcionar aquí el la suma. Hm. Entonces, vamos a armar la tabla. Vamos a poner A, B y C, es decir, el número que viene de A, el número que viene de B, y el carry que viene del dígito anterior. H esto nos genera, ¿qué cosa? Nos genera eh una suma y un carry que va al dígito siguiente. Entonces, tres entradas 00 0 1 0 1 0 1 10 1 y 1 1. Bien, ocho combinaciones de entrada. Fíjense, acá tenemos la 10, la 1 acá tenemos la 100. 1 acá nos tocó la 11 1 1. Y aquí la 001 001. Y según los números que pongamos, bueno, tendremos las distintas combinaciones. No hay otra que estas porque son tres dígitos binarios, no hay otra posible combinación. Bien, vamos a calcular la suma. ¿Qué pasa si sumamos 0 + 0 + 0? ¿Cuánto da la suma? 0. ¿Cuánto da el carry? 0. 0 + 0 + 1, ¿cuánto da la suma? 1. ¿Cuánto da el carry? 0. 0 + 1 + 0, ¿cuánto da la suma? 1. ¿Cuánto da el carry? 0. 0 + 1 + 1, Este es el que da 1 es decir, me da 0 en la suma, uno en el carry. 1 + 0 + 0 me da 1 en la suma, 0 en el carry. 1 + 0 + 1, 0 en la suma, 1 en el carry. 1 + 1 + 0, 0 en la suma. un en el carry. 1 + 1 + 1 me da 1 en la suma y 1 en el carry. Fíjense que acá, por ejemplo, que teníamos el 1 nos dio 1 como está acá pautado. Este que era el 1 0 1 nos da 0 y 1. Este que era el 1 nos dio 1 y 0. 1 0. Y este qué era 001 nos dio 1 y 0. 001 1 y 0. Es decir, que esta tabla refleja en un todo lo que necesitamos para un sumador de un dígito. Después, cuando lo tengamos armado, armaremos cuatro, los interconectaremos y estaremos hablando armando un sumador de cuatro dígitos. O si quiero armar más de ocho o de 16 o de pregunta. Por lo que vimos hace un rato que lo puse acá, si nosotros tenemos la tabla, podemos armar el circuito. Sí, lo acabamos de hacer con el problema que acá no tenemos una salida, tenemos dos salidas. ¿Cómo hacemos? Bueno, yo les sugiero una forma. Calculemos primero este circuito y al lado le ponemos este circuito. Entonces, tendremos un circuito que calcule la suma y otro circuito que calcule el carry. Los dos con las mismas entradas y las tres entradas se distribuirán entre ambos y así resolvemos el problema. Bueno, vamos entonces a armar el de la suma. ¿Qué combinaciones están dando uno a la salida? Esta combinación da un uno a la salida. Esta combinación da un uno a la salida. Estab da un uno a la salida. Y esta combinación da un uno a la salida. Entonces, una, dos, 3, 4 Cuatro compuertas sand. Se ve donde estoy escribiendo. Sí. Una, dos, tres, cuatro. La primera, A y B tienen que estar negadas. C sin negar. La segunda, A y C tienen que estar negadas. B sin negar. La tercera B y C tienen que estar negadas. a sin negar y la última, ninguna negada. Como acá al lado vamos a poner el circuito del carry, entonces las entradas las ponemos acá. Vamos a poner B y C. Entonces, aquí vamos derechito a conectarnos con A. Aquí subimos para conectarnos con B y subimos. para conectarnos con C. Esta va a C, esta va a C, esta va a C, esta A, esta A, a B y esta A a A, a A y A. Y acá le ponemos circulito porque los vamos a seguir hacia abajo para el circuito del carro. Entonces, cuando en A B C aparece, yo tengo cer acá, cer acá, cero. Acá si yo integro a todas con una OR en la sum voy a tener cero. Pero si pongo 001 001, acá voy a tener 1 1 acá voy a tener eh acá va a haber un cer va a haber un cero, acá va a haber dos ceros, entonces voy a tener un uno acá, cero acá, voy a tener un uno acá. Bueno, acá faltaría que lo interconecte. Bien. Quiere decir que si yo voy probando estas cuatro, en estas cuatro combinaciones, voy a tener o un acá, o un acá o un uno acá o un uno acá. Voy a tener un uno en la suma. Y si pruebo las otras cuatro, voy a tener un cero. Con lo cual ya tengo el circuito de la suma para poner acá. Vamos a hacer ahora el circuito del carry. Y para el circuito del carry, entonces ahora dónde tenemos los unos. Y me gustaría usar esta que es medio azulita la tinta. Entonces tengo, necesito detectar esta combinación, esta combinación, esta combinación y de nuevo esta combinación. Calcular el carry 1 1 1. Entonces de nuevo cuatro compuertas. El último tiene la ventaja que no tengo eh inversores en ninguna de las puertas. Alguien dirá, "Si yo lo quiero hacer optimizado, yo podría usar esta salida para o esta salida para alimentar acá también. Está puede ser, pero en realidad el circuito optimizado tendría muchísimas menos compuertas." Esto lo hacemos para entender que lo podemos, es decir, medio picapiedra, pero lo podemos decir, "Vamos a una casa de electrónica, compramos estas puertas y efectivamente las interconectamos entre sí y hacemos un sumador de un dígito. Volvemos a repetir el proceso una, 2, 3, 4, 5, 64 veces los interconectamos de esta forma. Tenemos un sumador de 64 bit para meter dentro de nuestro procesador. Bueno, pero este se tiene que poner en uno cuando haya 0 1 Entonces tengo que invertir el A y conectar derecho al B y derecho el C para el A. Vamos a hacer así. Bien, este en cambio tiene complementado el B. Este tengo complementado el C, por lo tanto, esta se va a poner en uno cuando aparezca 0 1 1. Esta se va a poner en uno cuando aparezca aquí 10 1. Esta se va a poner en uno cuando aparezca 10 y esta cuando aparezca 11 1 1. De nuevo, como antes, una compuador que diga carry. Bien, y aquí tenemos el sumador de un dígito binario. ¿Se dan cuenta que si le armamos un su lado. Dejamos afuera la salida S, la salida C y afuera las entradas A, B y C. Este cuadradito que tenemos acá no es otra cosa que, que doy vuelta a la hoja, que este cuadradito que tenemos acá, ¿está? Es decir, capaz que nos conviene más que se diga AC en vez de CBA, pero es Este circuito que me entrega un carry y una suma no es otra cosa que esto que tengo con este cuadradito en este punto. Es decir, si nosotros comenzáramos a hacer zoom, esto que está acá dentro veríamos que son todas estas compuestas. Quiere decir que ahora si unimos uno de estos, otro de estos otro de estos y otro de estos generamos el sumador de 4 bits que en nuestro modelo del año pasado o en del cuatrimestre pasado o en nuestro ejercicio del primer parcial analizábamos cómo funcionaba aquí dentro. Este es el cuando el primer el ejercicio del primer parcial, todos aquellos que tienen que dar sistema computación uno, donde hice dado el sumador interno de la WAL, dado este eh y ahí mostraba que estaba haciendo la suma de los números más uno, hm, por lo tanto, uno infería que estaba haciendo una resta y a partir de ahí uno hacía todo el análisis de los flags, es decir, de todo, todos elementos que analizábamos en ese momento. Ahora estamos usando lo que acabamos de aprender de compuertas para darnos cuenta que si hacemos este circuito ahora estamos logrando armar con circuitos ese famoso sumador interno de la WAL. que vimos en el cuatrimestre pasado. Es decir, si pusiéramos este sumador h adentro de una guante, 1 2 3 y cuatro entradas, está donde tenemos las cuatro entradas A, que vienen así, así, así y así. Y las cuatro entradas B. Pero si Nosotros queremos que reste, ¿qué tendríamos que hacer con las cuatro entradas B para que desde acá entren adecuadamente al sumador interno? Tendríamos que negarlas. Hm. Entonces, para que reste tendríamos que negarlas, pero cuando suma no. Entonces, ¿qué podríamos hacer para conectar estos cuatro puntos que tenemos acá con los cuatro puntos de entrada? de el dato B del sumador. Y acá vamos a ver lo que vimos cuando hablamos de las configuraciones sencillas, lo que tienen ahí en el video del Ultra como las primeras configuraciones sencillas. Nosotros le estuvimos agregando o analizando cada una de las compuertas como si una de las puertas fuese línea de control. Y cuando llegamos a la Exor, ahí nos dimos cuenta que si usábamos una patita como línea de control, cuando la línea de control era cer0. Z copia a A. Z copia a A. Eh, línea de control 0 Z = A. Y cuando la línea de control es 1, Z complemento de A. Z es el complemento de A. Entonces, yo les dije en la clase pasada, recuerden este problema. Yo tenía el sumador interno de la WAL, que necesitaba que fuese un cable cuando estoy sumando y que fuese como una especie de inversor. Vamos a poner acá un inversor grandote. Hm. Cuando estoy restando, quiere decir que si entrada, esta entrada que está acá o acá, en vez de conectar la directa, la conecto a cuatro compuertas exor. Hm. Cuando yo tengo acá un cer0, este valor 0 1 01 es el que entra al sumador. Y cuando yo tengo un uno acá, el valor 10 es el que entra. al sumador, quiere decir que para lograr que nuestra wal sume y reste, entonces yo aquí me quedó un poco chiquito, voy a tener que poner cuatro compuertas exor la salida de estas entrando a las entradas B del sumador interno, todas de estas con una línea de control que es la misma que sale hacia el exterior y las entradas van cada una a una compuesta. Es decir, esto que quedó tan chiquito es esto mismo. Hm. Un poco más grande. Por lo tanto, ahora cuando la línea de control es cero, esto se comporta como cuatro cables. La lida es igual a la entrada y al sumador interno, es decir, a este, a las puertas B, van a estar entrando el dato que se pone en la puerta B, digamos, del eh de la WAL. Pero cuando la línea de control es uno, entonces esta línea, estas exor trabajan como inversores. Entonces acá va a llegar no B3, no B2, no B1 y no B0. Van a llegar complementadas. ¿Qué me estaría faltando para que la suma sea completa? Además de invertir qué cosa adicional se hacía para queir a la resta en una suma. Teníamos que agregarle uno, teníamos que además sumar un uno, es decir, en el sumador interno, si nosotros teníamos que restar, por ejemplo, eh si hice mal, bueno, dejemos 8 - 4 Lo que hacíamos en el sumador era tener el 8, el complemento que era 1 0 1 y además sumar uno. H. Entonces lo que nos está faltando es sumarle uno acá para que esto funcione como restador. Pero hay una cosa casi maravillosa, una coincidencia enorme y es que acá en en el primer sumador ahí me esté dando una entradita libre que para que sume tengo que poner un cero. Y si acá le pongo un uno le estoy sumando un uno a toda la cuenta. ¿Quedó claro? Entonces directamente esta puerta que le tengo que poner un cero cuando sumo y le tengo que poner un uno cuando resto, la conecto ahí. Entonces cuando la línea de control es cero a esta primer puerta del primer sumador, del sumador de la unidad, le va a llegar un cero y simplemente va a sumar esto más esto. Pero cuando yo estoy haciendo una resta y acá le llega un 1, uno, entonces acá si yo acá tengo 0 + 0, va a ser 0 + 0 + 1. Si acá yo tengo 1, 1 va a ser 1 + 1 + 1. Es decir, le estoy agregando a través de esta puerta un adicional para que ahí sí este sumador sabe sumar a + b y punto modificando en forma muy sencilla la entrada B con compuertas Exor y utilizando esta puerta adicional que me quedó porque los hice igual a los otros, ahora este sumador me va a estar haciendo la resta entre estos dos valores, tal cual lo vimos en el primer ejercicio del parcial de sistema de computación uno, tal cual lo vimos eh cuando calculamos los flags. Está la salida. Ahora sí tengo las cuatro salidas y lo que me queda pendiente es calcular los flax.
+# 08 Construyendo una UAL
+
+[⬅ Volver al índice](README.md)
+
+Con lo que ya sabemos de circuitos ([compuertas](../clase-I/02%20Compuertas.md),
+[configuraciones sencillas](../clase-I/03%20ConfiguracionesSencillas.md),
+[tabla de verdad → circuito](../clase-I/06%20AnalisisYCalculoDeCircuitos.md))
+estamos en condiciones de armar la **UAL** (Unidad Aritmético-Lógica) que
+vimos como caja negra en Sistemas de Computación I: un bloque con dos
+números de entrada, una línea de control (0 = suma, 1 = resta), un
+resultado, y los flags (signo, cero, carry, overflow).
+
+Internamente la UAL solo tiene un **sumador**. Este apunte muestra cómo
+construirlo con compuertas.
+
+## El problema: dividirlo en un solo dígito
+
+Armar de una un sumador de 4 (u 8, 16, 32, 64) bits a la vez es
+inmanejable: para 4 bits ya son 8 entradas más la línea de control para 4
+salidas. La clave es notar que, al sumar dígito a dígito como se hace a
+mano, cada posición solo necesita **tres** datos: el bit de A, el bit de
+B, y el **carry** que arrastra el dígito anterior. Con eso genera dos
+salidas: el bit de la suma y el carry que pasa al dígito siguiente.
+
+Es decir, el problema se reduce a diseñar un circuito de **3 entradas y 2
+salidas** — el **sumador de un dígito** (full adder) — y después
+replicarlo una vez por cada bit, encadenando el carry de salida de uno
+con el carry de entrada del siguiente.
+
+## Tabla de verdad del sumador de un dígito
+
+Entradas A, B y C (carry entrante); salidas S (suma) y Cs (carry
+saliente):
+
+| A   | B   | C   | S   | Cs  |
+| --- | --- | --- | --- | --- |
+| 0   | 0   | 0   | 0   | 0   |
+| 0   | 0   | 1   | 1   | 0   |
+| 0   | 1   | 0   | 1   | 0   |
+| 0   | 1   | 1   | 0   | 1   |
+| 1   | 0   | 0   | 1   | 0   |
+| 1   | 0   | 1   | 0   | 1   |
+| 1   | 1   | 0   | 0   | 1   |
+| 1   | 1   | 1   | 1   | 1   |
+
+## Circuito: dos salidas, dos sub-circuitos
+
+Como el circuito tiene dos salidas, se resuelve en dos partes
+independientes que comparten las mismas tres entradas: un sub-circuito
+que calcula S y otro que calcula Cs.
+
+**Suma (S)**: vale 1 en las combinaciones 001, 010, 100 y 111. Se
+detecta cada una con una compuerta AND de 3 entradas (con inversor en
+las entradas que deben valer 0), y las cuatro salidas se juntan con una
+OR — el mismo método de "tabla de verdad → circuito" ya visto:
+
+![Circuito de la suma del sumador de un dígito](img/full-adder-sum.svg)
+
+**Carry saliente (Cs)**: vale 1 en las combinaciones 011, 101, 110 y 111. Se arma con el mismo método — cuatro AND de 3 entradas (en este
+caso ninguna necesita inversor en las tres a la vez, salvo la propia
+combinación) más una OR — usando las mismas tres entradas A, B, C:
+
+![Circuito del carry saliente del sumador de un dígito](img/full-adder-carry.svg)
+
+Este circuito, con S y Cs armados en paralelo, es el sumador de un
+dígito completo. Nótese que ni S ni Cs están optimizados (por ejemplo, S
+es en realidad A⊕B⊕C): se arman así, con AND y OR directos desde la
+tabla de verdad, porque el objetivo es entender que _se puede_ construir,
+no encontrar el circuito con menos compuertas — para eso están Karnaugh
+y el álgebra de Boole.
+
+## Encadenar dígitos: el sumador de N bits
+
+Una vez armado el sumador de un dígito, se lo encapsula (entradas A, B,
+C; salidas S, Cs) y se repite el mismo bloque una vez por bit. El carry
+saliente de un bloque entra como carry entrante del siguiente:
+
+- El primer bloque (bit 0, el menos significativo) recibe A0, B0 y una
+  entrada de carry libre.
+- Cada bloque siguiente recibe Ai, Bi, y el Cs del bloque anterior.
+- El carry saliente del último bloque (el más significativo) queda
+  disponible para calcular los flags.
+
+![Sumador de 4 bits armado con 4 sumadores de un dígito encadenados por el carry](img/full-adder-chain.svg)
+
+Con 4 bloques iguales interconectados así se arma un sumador de 4 bits;
+con 8, 16, 32 o 64 bloques, un sumador de esa cantidad de bits. Es
+exactamente el sumador interno de la UAL que se analizaba como caja
+negra en Sistemas de Computación I.
+
+## De sumador a UAL: sumar y restar
+
+El sumador tal cual queda armado solo suma. Para que la UAL también
+reste, hace falta modificar la entrada B antes de que llegue al
+sumador, usando la misma idea de **línea de control con XOR** vista en
+[configuraciones sencillas](../clase-I/03%20ConfiguracionesSencillas.md):
+con LC = 0 la XOR se comporta como un cable (Z = B), con LC = 1 se
+comporta como inversor (Z = B̄).
+
+Restar A − B en complemento a dos es sumar A + (complemento de B) + 1,
+es decir, invertir B y sumarle uno. Así que:
+
+- Cada bit de B pasa por una compuerta XOR, con la línea de control como
+  segunda entrada de las cuatro. Con LC = 0, cada XOR copia el bit de B
+  sin cambios (suma normal). Con LC = 1, cada XOR entrega el
+  complemento de B (resta).
+- El "+1" del complemento a dos se logra con la misma línea de control:
+  se conecta a la entrada de carry libre que quedaba en el primer
+  sumador (el del bit menos significativo). Con LC = 0 entra un 0 (no
+  suma nada extra); con LC = 1 entra un 1 (suma el uno que completa el
+  complemento a dos).
+
+![UAL de 4 bits: XOR selectoras de B más línea de control alimentando el carry inicial](img/alu-add-sub.svg)
+
+Con esto, el mismo sumador interno de un dígito, repetido y con esta
+selección en la entrada B, funciona como sumador cuando LC = 0 y como
+restador cuando LC = 1 — tal cual el bloque de Sistemas de Computación I.
+Falta calcular los flags a partir de este circuito.
+
+---
+
+[⬅ Volver al índice](README.md)

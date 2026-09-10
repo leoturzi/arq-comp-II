@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 280" width="460" height="280">
+  <rect x="0" y="0" width="460" height="280" fill="white"/>
+  <g fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Clock trunk -->
+    <line x1="20" y1="140" x2="60" y2="140"/>
+    <line x1="60" y1="140" x2="60" y2="105"/>
+    <line x1="60" y1="105" x2="70" y2="105"/>
+    <line x1="60" y1="140" x2="60" y2="185"/>
+    <line x1="60" y1="185" x2="150" y2="185"/>
+
+    <!-- NOT (Clock negado) -->
+    <path d="M70,85 L70,125 L118,105 Z" fill="white"/>
+    <circle cx="126" cy="105" r="7" fill="white"/>
+    <line x1="133" y1="105" x2="150" y2="105"/>
+
+    <!-- D externo -->
+    <line x1="20" y1="215" x2="150" y2="215"/>
+
+    <!-- realimentacion de Q como entrada del AND1 -->
+    <line x1="20" y1="75" x2="150" y2="75"/>
+
+    <!-- AND1: Q(realim.) y Clock' -->
+    <path d="M150,60 L180,60 A25,30 0 0 1 180,120 L150,120 Z" fill="white"/>
+    <line x1="210" y1="90" x2="240" y2="90"/>
+
+    <!-- AND2: Clock y D -->
+    <path d="M150,170 L180,170 A25,30 0 0 1 180,230 L150,230 Z" fill="white"/>
+    <line x1="210" y1="200" x2="240" y2="200"/>
+
+    <!-- OR combinadora -->
+    <path d="M240,70 Q262,145 240,220 Q282,220 302,145 Q282,70 240,70 Z" fill="white"/>
+    <line x1="302" y1="145" x2="430" y2="145"/>
+
+    <!-- realimentacion de la salida a la entrada A -->
+    <line x1="350" y1="145" x2="350" y2="20"/>
+    <line x1="350" y1="20" x2="20" y2="20"/>
+    <line x1="20" y1="20" x2="20" y2="75"/>
+  </g>
+  <g fill="black" stroke="none">
+    <circle cx="60" cy="140" r="3"/>
+    <circle cx="350" cy="145" r="3"/>
+    <circle cx="20" cy="75" r="3"/>
+  </g>
+  <g font-family="sans-serif" font-size="15" fill="black">
+    <text x="2" y="219">D</text>
+    <text x="2" y="132">Clock</text>
+    <text x="440" y="150">Q</text>
+    <text x="155" y="71" font-size="12">Q (realim.)</text>
+  </g>
+  <g font-family="sans-serif" font-size="12" fill="black" text-anchor="middle">
+    <text x="230" y="260">D-latch didáctico — Clock=1: Q=D (copia) · Clock=0: Q se retiene (realimentación)</text>
+  </g>
+</svg>

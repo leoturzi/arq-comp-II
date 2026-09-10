@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 250" width="560" height="250">
+  <rect x="0" y="0" width="560" height="250" fill="white"/>
+
+  <g fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- A inputs (straight) -->
+    <line x1="45" y1="20" x2="45" y2="65"/>
+    <line x1="185" y1="20" x2="185" y2="65"/>
+    <line x1="325" y1="20" x2="325" y2="65"/>
+    <line x1="465" y1="20" x2="465" y2="65"/>
+
+    <!-- raw B stubs into the XOR (left input of each gate) -->
+    <line x1="53" y1="8" x2="53" y2="26"/>
+    <line x1="193" y1="8" x2="193" y2="26"/>
+    <line x1="333" y1="8" x2="333" y2="26"/>
+    <line x1="473" y1="8" x2="473" y2="26"/>
+
+    <!-- XOR gates (B xor LC), vertical: inputs on top, output (tip) at the bottom feeds the block's B pin -->
+    <path d="M53,26 Q70,35 87,26" stroke-width="2.2"/>
+    <path d="M87,30 Q70,39 53,30 Q53,54 70,65 Q87,54 87,30 Z" fill="white" stroke-width="2.2"/>
+
+    <path d="M193,26 Q210,35 227,26" stroke-width="2.2"/>
+    <path d="M227,30 Q210,39 193,30 Q193,54 210,65 Q227,54 227,30 Z" fill="white" stroke-width="2.2"/>
+
+    <path d="M333,26 Q350,35 367,26" stroke-width="2.2"/>
+    <path d="M367,30 Q350,39 333,30 Q333,54 350,65 Q367,54 367,30 Z" fill="white" stroke-width="2.2"/>
+
+    <path d="M473,26 Q490,35 507,26" stroke-width="2.2"/>
+    <path d="M507,30 Q490,39 473,30 Q473,54 490,65 Q507,54 507,30 Z" fill="white" stroke-width="2.2"/>
+
+    <!-- LC trunk: right input of every XOR, plus el carry inicial del bloque LSB (A0), paralelo a B -->
+    <line x1="87" y1="26" x2="87" y2="5"/>
+    <line x1="227" y1="26" x2="227" y2="5"/>
+    <line x1="367" y1="26" x2="367" y2="5"/>
+    <line x1="507" y1="26" x2="507" y2="5"/>
+    <line x1="515" y1="65" x2="515" y2="5"/>
+    <line x1="15" y1="5" x2="515" y2="5"/>
+    <line x1="15" y1="5" x2="15" y2="230"/>
+
+    <!-- 4 full-adder blocks: A3/B3, A2/B2, A1/B1, A0/B0 -->
+    <rect x="30" y="65" width="80" height="90" fill="white" stroke-width="2.5"/>
+    <rect x="170" y="65" width="80" height="90" fill="white" stroke-width="2.5"/>
+    <rect x="310" y="65" width="80" height="90" fill="white" stroke-width="2.5"/>
+    <rect x="450" y="65" width="80" height="90" fill="white" stroke-width="2.5"/>
+
+    <!-- Cs, S outputs (bottom, parallel; Cs a la izquierda de S) -->
+    <line x1="50" y1="155" x2="50" y2="185"/>
+    <line x1="85" y1="155" x2="85" y2="215"/>
+
+    <line x1="190" y1="155" x2="190" y2="185"/>
+    <line x1="225" y1="155" x2="225" y2="215"/>
+
+    <line x1="330" y1="155" x2="330" y2="185"/>
+    <line x1="365" y1="155" x2="365" y2="215"/>
+
+    <line x1="470" y1="155" x2="470" y2="185"/>
+    <line x1="505" y1="155" x2="505" y2="215"/>
+
+    <!-- carry chain, ruteo en ángulo recto: Cs de box i -> Cin de box (i-1) -->
+    <polyline points="470,185 420,185 420,30 375,30 375,65"/>
+    <polyline points="330,185 280,185 280,30 235,30 235,65"/>
+    <polyline points="190,185 140,185 140,30 95,30 95,65"/>
+
+    <!-- Cs final (box A3) sale a la izquierda, hacia los flags -->
+    <line x1="50" y1="185" x2="5" y2="185"/>
+  </g>
+
+  <g fill="black" stroke="none">
+    <circle cx="15" cy="5" r="3"/>
+  </g>
+
+  <g font-family="sans-serif" font-size="14" fill="black">
+    <text x="35" y="17">A3</text>
+    <text x="48" y="6">B3</text>
+    <text x="175" y="17">A2</text>
+    <text x="188" y="6">B2</text>
+    <text x="315" y="17">A1</text>
+    <text x="328" y="6">B1</text>
+    <text x="455" y="17">A0</text>
+    <text x="468" y="6">B0</text>
+
+    <text x="73" y="227">S3</text>
+    <text x="213" y="227">S2</text>
+    <text x="353" y="227">S1</text>
+    <text x="493" y="227">S0</text>
+
+    <text x="2" y="181">Cs</text>
+    <text x="4" y="243">LC</text>
+  </g>
+  <g font-family="sans-serif" font-size="12" fill="black">
+    <text x="62" y="113">FA</text>
+    <text x="202" y="113">FA</text>
+    <text x="342" y="113">FA</text>
+    <text x="482" y="113">FA</text>
+  </g>
+</svg>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 240" width="480" height="240">
+  <rect x="0" y="0" width="480" height="240" fill="white"/>
+  <g fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- D externo -->
+    <line x1="10" y1="45" x2="60" y2="45"/>
+
+    <!-- caja maestro -->
+    <rect x="60" y="20" width="110" height="90" fill="white" stroke-width="2.5"/>
+    <!-- Q maestro -> D esclavo -->
+    <line x1="170" y1="65" x2="230" y2="65"/>
+    <line x1="230" y1="65" x2="230" y2="45"/>
+    <line x1="230" y1="45" x2="280" y2="45"/>
+
+    <!-- caja esclavo -->
+    <rect x="280" y="20" width="110" height="90" fill="white" stroke-width="2.5"/>
+    <!-- Q esclavo (salida final) -->
+    <line x1="390" y1="65" x2="440" y2="65"/>
+
+    <!-- clock externo -->
+    <line x1="245" y1="195" x2="245" y2="150"/>
+
+    <!-- clock directo al esclavo -->
+    <line x1="245" y1="150" x2="245" y2="95"/>
+    <line x1="245" y1="95" x2="280" y2="95"/>
+
+    <!-- clock negado al maestro -->
+    <line x1="245" y1="150" x2="215" y2="150"/>
+    <path d="M215,135 L215,165 L185,150 Z" fill="white"/>
+    <circle cx="178" cy="150" r="7" fill="white"/>
+    <line x1="171" y1="150" x2="45" y2="150"/>
+    <line x1="45" y1="150" x2="45" y2="95"/>
+    <line x1="45" y1="95" x2="60" y2="95"/>
+  </g>
+  <g fill="black" stroke="none">
+    <circle cx="245" cy="150" r="3"/>
+  </g>
+  <g font-family="sans-serif" font-size="15" fill="black" text-anchor="middle">
+    <text x="115" y="58">D-LATCH</text>
+    <text x="115" y="76">(maestro)</text>
+    <text x="335" y="58">D-LATCH</text>
+    <text x="335" y="76">(esclavo)</text>
+  </g>
+  <g font-family="sans-serif" font-size="15" fill="black">
+    <text x="2" y="40">D</text>
+    <text x="450" y="70">Q</text>
+  </g>
+  <g font-family="sans-serif" font-size="15" fill="black" text-anchor="middle">
+    <text x="245" y="212">Clock</text>
+  </g>
+  <g font-family="sans-serif" font-size="12" fill="black" text-anchor="middle">
+    <text x="240" y="232">Maestro-esclavo: dos D-latch encadenados, clock negado en el maestro</text>
+  </g>
+</svg>

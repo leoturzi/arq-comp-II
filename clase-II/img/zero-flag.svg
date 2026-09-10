@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <rect x="0" y="0" width="300" height="300" fill="white"/>
+
+  <g fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- 4 inputs, each inverted, into a 4-input AND -->
+    <line x1="20" y1="40" x2="120" y2="40"/>
+    <line x1="134" y1="40" x2="140" y2="40"/>
+    <line x1="20" y1="113" x2="120" y2="113"/>
+    <line x1="134" y1="113" x2="140" y2="113"/>
+    <line x1="20" y1="187" x2="120" y2="187"/>
+    <line x1="134" y1="187" x2="140" y2="187"/>
+    <line x1="20" y1="260" x2="120" y2="260"/>
+    <line x1="134" y1="260" x2="140" y2="260"/>
+
+    <!-- AND gate scaled for 4 inputs -->
+    <path d="M140,10 L170,10 A65,140 0 0 1 170,290 L140,290 Z" fill="white" stroke-width="2.5"/>
+    <line x1="235" y1="150" x2="270" y2="150"/>
+
+    <!-- inversion bubbles -->
+    <circle cx="127" cy="40" r="7" fill="white" stroke-width="2.5"/>
+    <circle cx="127" cy="113" r="7" fill="white" stroke-width="2.5"/>
+    <circle cx="127" cy="187" r="7" fill="white" stroke-width="2.5"/>
+    <circle cx="127" cy="260" r="7" fill="white" stroke-width="2.5"/>
+  </g>
+
+  <g font-family="sans-serif" font-size="15" fill="black">
+    <text x="4" y="36">S3</text>
+    <text x="4" y="109">S2</text>
+    <text x="4" y="183">S1</text>
+    <text x="4" y="256">S0</text>
+    <text x="276" y="155">Z</text>
+  </g>
+</svg>

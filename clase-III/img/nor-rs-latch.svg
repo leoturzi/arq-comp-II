@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 300" width="460" height="300">
+  <rect x="0" y="0" width="460" height="300" fill="white"/>
+  <g fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- external inputs -->
+    <line x1="40" y1="45" x2="140" y2="45"/>
+    <line x1="40" y1="255" x2="140" y2="255"/>
+
+    <!-- top NOR: inputs R (45) y Q̄ realim. (75) -> salida Q -->
+    <path d="M140,30 Q162,60 140,90 Q182,90 202,60 Q182,30 140,30 Z" fill="white"/>
+    <circle cx="209" cy="60" r="7" fill="white"/>
+    <line x1="216" y1="60" x2="300" y2="60"/>
+
+    <!-- bottom NOR: inputs Q realim. (225) y S (255) -> salida Q̄ -->
+    <path d="M140,210 Q162,240 140,270 Q182,270 202,240 Q182,210 140,210 Z" fill="white"/>
+    <circle cx="209" cy="240" r="7" fill="white"/>
+    <line x1="216" y1="240" x2="300" y2="240"/>
+
+    <!-- realimentacion: Q (salida top) -> entrada superior de bottom -->
+    <line x1="240" y1="60" x2="240" y2="225"/>
+    <line x1="240" y1="225" x2="140" y2="225"/>
+
+    <!-- realimentacion: Q̄ (salida bottom) -> entrada inferior de top -->
+    <line x1="270" y1="240" x2="270" y2="75"/>
+    <line x1="270" y1="75" x2="140" y2="75"/>
+  </g>
+  <g fill="black" stroke="none">
+    <circle cx="240" cy="60" r="3"/>
+    <circle cx="270" cy="240" r="3"/>
+  </g>
+  <g font-family="sans-serif" font-size="15" fill="black">
+    <text x="12" y="40">R</text>
+    <text x="12" y="250">S</text>
+    <text x="320" y="65">Q</text>
+    <text x="320" y="245">Q̄</text>
+  </g>
+  <g font-family="sans-serif" font-size="12" fill="black" text-anchor="middle">
+    <text x="230" y="292">Flip-flop RS con dos NOR realimentadas — Q = (R+Q̄)&#39;, Q̄ = (S+Q)&#39;</text>
+  </g>
+</svg>
